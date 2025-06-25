@@ -8,6 +8,16 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/form',
+    name: 'form',
+    component: () => import(/* webpackChunkName: "form" */ '../views/FormView.vue')
+  },
+  {
+    path: '/confirm/:formData',
+    name: 'confirm',
+    component: () => import(/* webpackChunkName: "confirm" */ '../views/ConfirmView.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
